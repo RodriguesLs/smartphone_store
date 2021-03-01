@@ -1,0 +1,19 @@
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @product.manufacturer %>
+</p>
+
+<p>
+  <strong>Release year:</strong>
+  <%= @product.release_year %>
+</p>
+
+<h4>Sells</h4>
+<% @product.sells.each_with_index do |sell, i| %>
+  <p><%= (i + 1)%>. <%= sell.date.strftime("%d/%m/%Y") %> </p>
+<% end %>
